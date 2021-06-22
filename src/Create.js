@@ -13,7 +13,7 @@ const history= useHistory();
   e.preventDefault();
   const blog ={title,body,author};
   SetIsPending(true);
-  fetch('https://my-json-server.typicode.com/Rahul5choudhary/Blog/blogs',{
+  fetch('http://localhost:8001/blogs',{
     method:'POST',
     headers :{"Content-Type": "application/json"},
     body:JSON.stringify(blog)
