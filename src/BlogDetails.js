@@ -4,10 +4,10 @@ import { useHistory } from "react-router-dom";
 
 const BlogDetails = () => {
     const {id} =useParams();
-    const {data:blog,error ,isPending}=useFetch('https://my-json-server.typicode.com/Rahul5choudhary/Blog/blogs'+id);
+    const {data:blog,error ,isPending}=useFetch('https://my-json-server.typicode.com/Rahul5choudhary/Blog/blogs/'+id);
     const history=useHistory();
 const handleClick =() =>{
-    fetch('https://my-json-server.typicode.com/Rahul5choudhary/Blog/blogs'+blog.id,
+    fetch('https://my-json-server.typicode.com/Rahul5choudhary/Blog/blogs/'+blog.id,
     {
         method: 'DELETE'
     }).then(()=>{
